@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutors Team</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #eef2ff, #ffffff);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #1e40af;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .cards {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .card h2 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+    .subscribe {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .subscribe input {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+    .subscribe button {
+      padding: 10px 20px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 40px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tutors Team</h1>
+    <p>Професійна допомога у навчанні з різних предметів</p>
+  </header>
+
+  <div class="cards">
+    <div class="card">
+      <h2>Математика</h2>
+      <p>Індивідуальні та групові заняття з алгебри, геометрії, ЗНО/НМТ.</p>
+    </div>
+    <div class="card">
+      <h2>Англійська мова</h2>
+      <p>Покращення граматики, розмовної мови, підготовка до іспитів.</p>
+    </div>
+    <div class="card">
+      <h2>Програмування</h2>
+      <p>Основи Python, JavaScript, створення сайтів, підготовка до олімпіад.</p>
+    </div>
+  </div>
+
+  <div class="subscribe">
+    <h3>Залиште email для безкоштовної консультації</h3>
+    <input type="email" placeholder="Ваш email" id="email" />
+    <button onclick="submitEmail()">Надіслати</button>
+  </div>
+
+  <footer>
+    © 2025 Tutors Team. Всі права захищено.
+  </footer>
+
+  <script>
+    function submitEmail() {
+      const email = document.getElementById(\"email\").value;
+      if (email) {
+        alert(\"Дякуємо! Ми зв'яжемося з вами: \" + email);
+      } else {
+        alert(\"Будь ласка, введіть email\");
+      }
+    }
+  </script>
+</body>
+</html>
