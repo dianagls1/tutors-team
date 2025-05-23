@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tutors Team</title>
   <style>
     body {
@@ -13,15 +13,30 @@
     }
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 20px 20px 10px;
+      background: #1e40af;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     header h1 {
-      font-size: 2.5rem;
-      color: #1e40af;
+      margin: 0;
+      font-size: 2rem;
     }
-    header p {
-      font-size: 1.2rem;
-      color: #555;
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #bfdbfe;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: white;
     }
     .cards {
       display: grid;
@@ -29,7 +44,7 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       padding: 20px;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 20px auto 0;
     }
     .card {
       background: white;
@@ -43,7 +58,7 @@
     }
     .subscribe {
       text-align: center;
-      margin-top: 50px;
+      margin: 50px 20px 60px;
     }
     .subscribe input {
       padding: 10px;
@@ -72,7 +87,10 @@
 <body>
   <header>
     <h1>Tutors Team</h1>
-    <p>Професійна допомога у навчанні з різних предметів</p>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="team.html">Наша команда</a>
+    </nav>
   </header>
 
   <div class="cards">
@@ -85,8 +103,8 @@
       <p>Покращення граматики, розмовної мови, підготовка до іспитів.</p>
     </div>
     <div class="card">
-      <h2>Програмування</h2>
-      <p>Основи Python, JavaScript, створення сайтів, підготовка до олімпіад.</p>
+      <h2>Українська мова</h2>
+      <p>Підготовка до НМТ, вивчення шкільної програми, допомога з домашніми завданнями</p>
     </div>
   </div>
 
@@ -102,13 +120,14 @@
 
   <script>
     function submitEmail() {
-      const email = document.getElementById(\"email\").value;
+      const email = document.getElementById("email").value;
       if (email) {
-        alert(\"Дякуємо! Ми зв'яжемося з вами: \" + email);
+        alert("Дякуємо! Ми зв'яжемося з вами: " + email);
       } else {
-        alert(\"Будь ласка, введіть email\");
+        alert("Будь ласка, введіть email");
       }
     }
   </script>
 </body>
 </html>
+
